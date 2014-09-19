@@ -4,7 +4,7 @@
 
 > A sample application for Android developer with gestureKit technoloty. 
 
-## Usage 
+## Usage  
 
 Draw the h gesture or press the button. 
 
