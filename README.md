@@ -4,15 +4,25 @@
 
 > A sample application for Android developer with gestureKit technoloty. 
 
-## Usage
+## Usage 
+
+Draw the h gesture or press the button. 
+
+## Setup
+
+### Import GestureKit jar file into the project. 
+
+* Download the last version of GestureKit jar file from [Download Page](http://www.gesturekit.com/learn/downloads/)
+
+* Import the jar file into your project.  
 
 ### To enable the Helper, add the dependency GestureKitHelper plugin.
 
 Helper plugin is disabled. You should download the [GestureKitHelper](https://github.com/RoamTouch/gesturekit-helper-android) plugin.
 
-1) Import the library into your workspace.
+* Import the library into your workspace.
 
-2) Edit the properties of the GKPlayer and add the imported library. 
+* Edit the properties of the GKPlayer and add the imported library. 
 
 Make sure you uncomment this line on your code to load the plugin. 
 
