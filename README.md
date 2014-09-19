@@ -4,6 +4,8 @@
 
 > A sample application for Android developer with gestureKit technoloty. 
 
+You can down load this application from the [PLAY STORE](https://play.google.com/store/apps/details?id=com.roamtouch.gesturekit.gesturekithelloworld).
+
 ## Usage  
 
 Draw the h gesture or press the button. 
