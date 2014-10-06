@@ -15,19 +15,23 @@ Draw the ? gesture or press the button.
 
 ### Import GestureKit jar file into the project. 
 
-* Download the last version of GestureKit jar file from [Download Page](http://www.gesturekit.com/learn/downloads/)
+1) Download the last version of GestureKit jar file from [Download Page](http://www.gesturekit.com/learn/downloads/)
 
-* Import the jar file into your project.  
+2) Import the jar file into your project.  
 
 ### To enable the Helper, add the dependency GestureKitHelper plugin.
 
 Helper plugin is disabled. You should download the [GestureKitHelper](https://github.com/RoamTouch/gesturekit-helper-android) plugin.
 
-* Import the library into your workspace.
+1) Remove GestureKit jar file from HelloWorld project. 
 
-* Edit the properties of the GKPlayer and add the imported library. 
+2) Import GestureKitHelper library into your workspace.
 
-Make sure you uncomment this line on your code to load the plugin. 
+3) Import GestureKit jar file into your GestureKitHelper project. 
+
+4) On GestureKitHelper Java Build Path set GestureKit library to the top.
+
+Make sure you uncomment this line on your code to load the plugin.  
 
 ```html
 this.gesturekit.setPlugin((PluginInterface) new GestureKitHelper(this, this.gesturekit));
