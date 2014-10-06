@@ -1,14 +1,14 @@
 package com.roamtouch.gesturekit.gesturekithelloworld;
 
 // GestureKit imports
+
 import com.roamotuch.gesturekit.plugin.GKActionInterface;
 import com.roamotuch.gesturekit.plugin.PluginInterface;
 import com.roamtouch.gesturekit.GestureKit;
 import com.roamtouch.gesturekit.GestureKit.GestureKitListener;
-import com.roamtouch.gesturekit.gesturekithelper.GestureKitHelper;
 
 // GestureKit Plugin import
-//import com.roamtouch.gesturekit.gesturekithelper.GestureKitHelper;
+import com.roamtouch.gesturekit.gesturekithelper.GestureKitHelper;
 //import com.roamtouch.gesturekit.gesturekitpixiedust.GestureKitPixiedust;
 
 import android.os.Bundle;
@@ -24,6 +24,7 @@ import android.widget.Toast;
 public class GestureKitHelloWorld extends Activity implements GKActionInterface {
 
 	Button helloButton;
+	Button helpButton;
 	GestureKit gesturekit;
 	private ProgressBar spinner;
 	private TextView textView1;
@@ -34,7 +35,11 @@ public class GestureKitHelloWorld extends Activity implements GKActionInterface 
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_gesture_kit_hello_world);
 		
-		helloButton = (Button) findViewById(R.id.helloWorldButton);
+		helloButton = (Button) findViewById(R.id.helloButton);
+		
+		helpButton = (Button) findViewById(R.id.helpButton);
+
+		setTitle("Hello World GestureKit Android");
 		
 		helloButton.setOnClickListener(new OnClickListener() {
 			
@@ -46,11 +51,21 @@ public class GestureKitHelloWorld extends Activity implements GKActionInterface 
 			}
 		});
 		
+		helpButton.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Toast.makeText(getApplicationContext(), 
+						"Help! From button", Toast.LENGTH_LONG).show();
+				
+			}
+		});
+		
 		// GestureKit Object
 		this.gesturekit = new GestureKit(this,  "38381630-b759-4c55-91c1-985306dbe587");
 		
 		// GestureKit Helper Plugin. See README.	
-		//this.gesturekit.setPlugin((PluginInterface) new GestureKitHelper(this, this.gesturekit));		
+		this.gesturekit.setPlugin((PluginInterface) new GestureKitHelper(this, this.gesturekit));		
 			
 		// GestureKit PixieDust Plugin. See README.		
 		//this.gesturekit.setPlugin((PluginInterface) new GestureKitPixiedust(this, this.gesturekit));
@@ -76,6 +91,21 @@ public class GestureKitHelloWorld extends Activity implements GKActionInterface 
 				"Hello World! From gesture", Toast.LENGTH_LONG).show();
 	}
 
+	public void HELLO(String hello){
+		Toast.makeText(getApplicationContext(), 
+				"Hello World! From gesture", Toast.LENGTH_LONG).show();
+	}
+	
+	public void HELP(){
+		Toast.makeText(getApplicationContext(), 
+				"Help! From gesture", Toast.LENGTH_LONG).show();
+	}
+
+	public void HELP(String hello){
+		Toast.makeText(getApplicationContext(), 
+				"Help! From gesture", Toast.LENGTH_LONG).show();
+	}
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.

@@ -9,6 +9,7 @@ You can down load this application from the [PLAY STORE](https://play.google.com
 ## Usage  
 
 Draw the h gesture or press the button. 
+Draw the ? gesture or press the button.
 
 ## Setup
 
